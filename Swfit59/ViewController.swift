@@ -57,13 +57,14 @@ class ViewController: UIViewController {
         var somStr = SomeStructure()
         somStr.somNum = 66
         print(somStr.$somNum)
-        print(UIApplication.shared.topViewController as Any)
+        print(UIApplication.shared.topViewController!)
     }
 
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-        print(UIApplication.shared.topViewController as Any)
+        print(UIApplication.shared.topViewController!)
     }
+
     func balance(_ x: inout Int, _ y: inout Int) {
         let sum = x + y
         x = sum / 2
@@ -405,4 +406,3 @@ func wash<T: Vehicle>(_ vehicle: T) {}
 func wash2<T>(_ vehicle: T) where T: Vehicle {}
 
 func wash3(_ vehicle: some Vehicle) {}
-
