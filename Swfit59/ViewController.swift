@@ -58,6 +58,31 @@ class ViewController: UIViewController {
         somStr.somNum = 66
         print(somStr.$somNum)
         print(UIApplication.shared.topViewController!)
+
+        /// https://dev.classmethod.jp/articles/swift_keypath1/
+        /// https://github.com/apple/swift-evolution/blob/main/proposals/0249-key-path-literal-function-expressions.md
+        /// keyPath    \.
+        struct Cat {
+            var name: String
+            var age: Int
+            func meow() -> String {
+                return "meow"
+            }
+        }
+        var cat = Cat(name: "mi-san", age: 10)
+
+        let _: PartialKeyPath<Cat> = \.age
+        let _: KeyPath<Cat, String> = \.name
+        let age = \Cat.age
+
+        let cats = [Cat]()
+        let c = cats.map {
+            $0[keyPath: \Cat.name]
+        }
+
+        let f: (Cat) -> String = { kp in { root in root[keyPath: kp] } }(\Cat.name)
+        let a = cats.map(f)
+        let b = cats.map(^\.name)
     }
 
     override func viewDidAppear(_ animated: Bool) {

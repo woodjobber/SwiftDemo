@@ -25,6 +25,7 @@
 		7CC095EE2A5871B700860312 /* Dictionary+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CC095ED2A5871B700860312 /* Dictionary+.swift */; };
 		7CC095F02A58737400860312 /* Collection+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CC095EF2A58737400860312 /* Collection+.swift */; };
 		7CC095F22A58751A00860312 /* Array+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CC095F12A58751A00860312 /* Array+.swift */; };
+		7CC095F42A59092900860312 /* Operators.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CC095F32A59092900860312 /* Operators.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -48,6 +49,7 @@
 		7CC095ED2A5871B700860312 /* Dictionary+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Dictionary+.swift"; sourceTree = "<group>"; };
 		7CC095EF2A58737400860312 /* Collection+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Collection+.swift"; sourceTree = "<group>"; };
 		7CC095F12A58751A00860312 /* Array+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Array+.swift"; sourceTree = "<group>"; };
+		7CC095F32A59092900860312 /* Operators.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Operators.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,6 +101,7 @@
 				7CC095ED2A5871B700860312 /* Dictionary+.swift */,
 				7CC095EF2A58737400860312 /* Collection+.swift */,
 				7CC095F12A58751A00860312 /* Array+.swift */,
+				7CC095F32A59092900860312 /* Operators.swift */,
 			);
 			path = Swfit59;
 			sourceTree = "<group>";
@@ -183,6 +186,7 @@
 				7CC095F02A58737400860312 /* Collection+.swift in Sources */,
 				7CC095DA2A58131200860312 /* Nibable.swift in Sources */,
 				7CC095EC2A586C4600860312 /* UICollectionView.swift in Sources */,
+				7CC095F42A59092900860312 /* Operators.swift in Sources */,
 				7CC095DE2A5818DC00860312 /* Storyboadable.swift in Sources */,
 				7CC095E62A58311100860312 /* UIApplication+.swift in Sources */,
 				7CC095EE2A5871B700860312 /* Dictionary+.swift in Sources */,
