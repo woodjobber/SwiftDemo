@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import CryptoSwift
 
 class ViewController: UIViewController {
     override func viewDidLoad() {
@@ -83,6 +84,7 @@ class ViewController: UIViewController {
         let f: (Cat) -> String = { kp in { root in root[keyPath: kp] } }(\Cat.name)
         let a = cats.map(f)
         let b = cats.map(^\.name)
+ 
     }
 
     override func viewDidAppear(_ animated: Bool) {
