@@ -28,6 +28,7 @@
 		7CC095F42A59092900860312 /* Operators.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CC095F32A59092900860312 /* Operators.swift */; };
 		7CC095F62A5A7C6A00860312 /* RxLab.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CC095F52A5A7C6A00860312 /* RxLab.swift */; };
 		7CC095F82A5AC50B00860312 /* Json4Swift_Base.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CC095F72A5AC50B00860312 /* Json4Swift_Base.swift */; };
+		7CC095FA2A5AF51C00860312 /* ObMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CC095F92A5AF51C00860312 /* ObMapper.swift */; };
 		86B8B669ED9A371AFE2A6AC9 /* Pods_Swfit59.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 75BC41618D9B35E7864ED9D6 /* Pods_Swfit59.framework */; };
 /* End PBXBuildFile section */
 
@@ -56,6 +57,7 @@
 		7CC095F32A59092900860312 /* Operators.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Operators.swift; sourceTree = "<group>"; };
 		7CC095F52A5A7C6A00860312 /* RxLab.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RxLab.swift; sourceTree = "<group>"; };
 		7CC095F72A5AC50B00860312 /* Json4Swift_Base.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Json4Swift_Base.swift; sourceTree = "<group>"; };
+		7CC095F92A5AF51C00860312 /* ObMapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObMapper.swift; sourceTree = "<group>"; };
 		E675A0C1F1E18DF04708C11A /* Pods-Swfit59.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Swfit59.debug.xcconfig"; path = "Target Support Files/Pods-Swfit59/Pods-Swfit59.debug.xcconfig"; sourceTree = "<group>"; };
 		F53F2A87EB8BBAB6310C2351 /* Pods-Swfit59.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Swfit59.release.xcconfig"; path = "Target Support Files/Pods-Swfit59/Pods-Swfit59.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -132,6 +134,7 @@
 				7CC095F32A59092900860312 /* Operators.swift */,
 				7CC095F52A5A7C6A00860312 /* RxLab.swift */,
 				7CC095F72A5AC50B00860312 /* Json4Swift_Base.swift */,
+				7CC095F92A5AF51C00860312 /* ObMapper.swift */,
 			);
 			path = Swfit59;
 			sourceTree = "<group>";
@@ -253,6 +256,7 @@
 			files = (
 				7CB03A502A4AD7C50078E96D /* ViewController.swift in Sources */,
 				7CC095F62A5A7C6A00860312 /* RxLab.swift in Sources */,
+				7CC095FA2A5AF51C00860312 /* ObMapper.swift in Sources */,
 				7CC095E22A5825FD00860312 /* UIWindow+.swift in Sources */,
 				7CC095EA2A586BF300860312 /* UICollectionViewCell+.swift in Sources */,
 				7CC095E42A58262300860312 /* UIViewController+.swift in Sources */,
