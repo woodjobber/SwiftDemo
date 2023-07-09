@@ -7,4 +7,7 @@ target 'Swfit59' do
 
   # Pods for Swfit59
   pod 'CryptoSwift'
+  pod 'RxSwift'
+  pod 'RxCocoa'
+  pod 'ObjectMapper'
 end

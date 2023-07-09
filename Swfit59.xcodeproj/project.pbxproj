@@ -26,6 +26,8 @@
 		7CC095F02A58737400860312 /* Collection+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CC095EF2A58737400860312 /* Collection+.swift */; };
 		7CC095F22A58751A00860312 /* Array+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CC095F12A58751A00860312 /* Array+.swift */; };
 		7CC095F42A59092900860312 /* Operators.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CC095F32A59092900860312 /* Operators.swift */; };
+		7CC095F62A5A7C6A00860312 /* RxLab.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CC095F52A5A7C6A00860312 /* RxLab.swift */; };
+		7CC095F82A5AC50B00860312 /* Json4Swift_Base.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CC095F72A5AC50B00860312 /* Json4Swift_Base.swift */; };
 		86B8B669ED9A371AFE2A6AC9 /* Pods_Swfit59.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 75BC41618D9B35E7864ED9D6 /* Pods_Swfit59.framework */; };
 /* End PBXBuildFile section */
 
@@ -52,6 +54,8 @@
 		7CC095EF2A58737400860312 /* Collection+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Collection+.swift"; sourceTree = "<group>"; };
 		7CC095F12A58751A00860312 /* Array+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Array+.swift"; sourceTree = "<group>"; };
 		7CC095F32A59092900860312 /* Operators.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Operators.swift; sourceTree = "<group>"; };
+		7CC095F52A5A7C6A00860312 /* RxLab.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RxLab.swift; sourceTree = "<group>"; };
+		7CC095F72A5AC50B00860312 /* Json4Swift_Base.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Json4Swift_Base.swift; sourceTree = "<group>"; };
 		E675A0C1F1E18DF04708C11A /* Pods-Swfit59.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Swfit59.debug.xcconfig"; path = "Target Support Files/Pods-Swfit59/Pods-Swfit59.debug.xcconfig"; sourceTree = "<group>"; };
 		F53F2A87EB8BBAB6310C2351 /* Pods-Swfit59.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Swfit59.release.xcconfig"; path = "Target Support Files/Pods-Swfit59/Pods-Swfit59.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -74,7 +78,6 @@
 				E675A0C1F1E18DF04708C11A /* Pods-Swfit59.debug.xcconfig */,
 				F53F2A87EB8BBAB6310C2351 /* Pods-Swfit59.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -127,6 +130,8 @@
 				7CC095EF2A58737400860312 /* Collection+.swift */,
 				7CC095F12A58751A00860312 /* Array+.swift */,
 				7CC095F32A59092900860312 /* Operators.swift */,
+				7CC095F52A5A7C6A00860312 /* RxLab.swift */,
+				7CC095F72A5AC50B00860312 /* Json4Swift_Base.swift */,
 			);
 			path = Swfit59;
 			sourceTree = "<group>";
@@ -247,6 +252,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				7CB03A502A4AD7C50078E96D /* ViewController.swift in Sources */,
+				7CC095F62A5A7C6A00860312 /* RxLab.swift in Sources */,
 				7CC095E22A5825FD00860312 /* UIWindow+.swift in Sources */,
 				7CC095EA2A586BF300860312 /* UICollectionViewCell+.swift in Sources */,
 				7CC095E42A58262300860312 /* UIViewController+.swift in Sources */,
@@ -256,6 +262,7 @@
 				7CC095DA2A58131200860312 /* Nibable.swift in Sources */,
 				7CC095EC2A586C4600860312 /* UICollectionView.swift in Sources */,
 				7CC095F42A59092900860312 /* Operators.swift in Sources */,
+				7CC095F82A5AC50B00860312 /* Json4Swift_Base.swift in Sources */,
 				7CC095DE2A5818DC00860312 /* Storyboadable.swift in Sources */,
 				7CC095E62A58311100860312 /* UIApplication+.swift in Sources */,
 				7CC095EE2A5871B700860312 /* Dictionary+.swift in Sources */,
