@@ -1,0 +1,14 @@
+
+Interactor
+
+The Interactor is responsible to manipulate the model, keep it in a consistent state, notify changes. The interactor can be used, for example, to communicate with your backend to fetch the model, to update it, etc.
+
+Coordinator
+
+The Coordinator is responsible to setup all the components of a module together and eventually to use other Coordinator's to navigate.
+It holds a weak reference to the View because the View itself is what keeps all the compents alive until the View is removed from the hierachy.
+
+Binding
+
+The Interactor is binded to the View so that whenever the Model changes a new ViewModel is created and the View is reconfigured. The View has a single method that given a ViewModel updates the whole UI (configure(with: viewModel)).
+This means that given the same ViewModel the View is supposed to looks exactly the same.

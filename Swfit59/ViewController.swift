@@ -7,11 +7,28 @@
 
 import UIKit
 import CryptoSwift
+import RxSwift
+import RxCocoa
 
-class ViewController: UIViewController {
+class ViewController: UIViewController,Storyboardable {
+
+    
+    @IBOutlet weak var tableView: UITableView!
+    
+    @IBOutlet weak var textField: UITextField!
+    
+
+    private let viewModel: SampleViewModel = SampleViewModel()
+    private var eventsDataSource: [Event] = []
+    private let disposeBag = DisposeBag()
+    
+    
+    static var storyboardName: String {
+        return "Main"
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-      
         let success = ServerResponse.result("6:00 am", "8:09 pm")
 //        let failure = ServerResponse.failure("Out of cheese.")
         switch success {
@@ -31,7 +48,7 @@ class ViewController: UIViewController {
 
         var names = ["a", "b", "c"]
         names.sort { $0 > $1 }
-
+        
         print(names)
         let digitNames = [
             0: "Zero", 1: "One", 2: "Two", 3: "Three", 4: "Four",
@@ -84,6 +101,7 @@ class ViewController: UIViewController {
 
         let f: (Cat) -> String = { kp in { root in root[keyPath: kp] } }(\Cat.name)
         _ = cats.map(f)
+        // ^ prefix operators
         _ = cats.map(^\.name)
         _ = cats.map(\.age)
         _ = RxLab()
@@ -101,15 +119,67 @@ class ViewController: UIViewController {
         
         let json1 = """
         {
-            "phone": null
+            "phone": "12",
+            "age": 12
         }
         """.data(using: .utf8)!
         
         do {
             let result = try JSONDecoder().decode(Human.self, from: json1)
-            print(result.phone)
+            print(result)
         }catch {}
+        UIView.animate(withDuration: 5, animations: self.view.backgroundColor = .blue)
+    
+        let xs = Observable.deferred { () -> Observable in
+                       print("Performing work ...")
+                       return Observable.just(Date().timeIntervalSince1970)
+                   }
+                   .share(replay: 1, scope: .forever)
+
+        _ = xs.subscribe(onNext: { x in print("next \(x)") }, onCompleted: { print("completedn") })
+               _ = xs.subscribe(onNext: {x in print("next \(x)") }, onCompleted: { print("completen") })
+               _ = xs.subscribe(onNext: {x in print("next \(x)") }, onCompleted: { print("completen") })
+ 
         
+        self.textField.rx.text.orEmpty.filter { x in
+            x.count >= 1
+        }.debounce(RxTimeInterval.milliseconds(3), scheduler: MainScheduler()).asDriver(onErrorDriveWith: Driver.empty()).drive(viewModel.searchWord).disposed(by: disposeBag)
+        
+        viewModel.events.subscribe {[weak self] events in
+            guard let self = self else {return}
+            if let events = events {
+                self.eventsDataSource = events.events ?? []
+                self.tableView.reloadData()
+            }
+        }.disposed(by: disposeBag)
+    
+        let db = viewModel.events.compactMap { $0?.events}
+        db.observe(on: MainScheduler()).bind(to: tableView.rx.items(cellIdentifier: SampleCell.identifier,cellType: SampleCell.self)){
+          (_,element,cell) in
+            var c = cell.defaultContentConfiguration()
+            c.text = element.title
+            cell.contentConfiguration = c
+            cell.selectionStyle = .none
+        }.disposed(by: disposeBag)
+        
+        
+        let keyboard = MechanicalKeyboard(keySwitch: .tactile, name: "a", numberOfKeys: 67)
+        print(keyboard.numbers)
+        print(countDown())
+    }
+    @StringBuilder
+    func getStrings() -> String {
+        "喜洋洋"
+        "美羊羊"
+        "灰太狼"
+    }
+    
+    @ComplexStringBuilder
+    func countDown() -> String {
+       for i in (0...10).reversed() {
+            "\(i)..."
+        }
+        "Lift off!"
     }
 
     override func viewDidAppear(_ animated: Bool) {
@@ -472,7 +542,97 @@ struct Man: Codable {
 }
 
 struct Human: Kodable {
-    
-  @Coding(default: "+ 111")  var phone: String
+    init() {
 
+    }
+    
+    @Coding()  var phone: String = "123456"
+    @Coding()  var age: Int = 0
+    
+}
+
+extension UIView {
+   class func animate(withDuration duration: TimeInterval, animations: @escaping @autoclosure () -> Void) {
+        UIView.animate(withDuration: duration, animations: animations)
+    }
+}
+
+class ExView: UIView {
+    var text: String
+    init(text: String) {
+        self.text = text
+        super.init(frame: .zero)
+    }
+    
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+}
+extension Reactive where Base: ExView {
+    var text: Binder<String> {
+      return Binder(base) { t, title in
+            t.text = title
+        }
+    }
+}
+
+enum KeySwitch {
+    case liner
+    case tactile
+    case clicky
+}
+
+@dynamicMemberLookup
+class MechanicalKeyboard {
+    let keySwitch: KeySwitch
+    let name: String
+    let numberOfKeys: Int
+    
+    init(keySwitch: KeySwitch, name: String, numberOfKeys: Int) {
+        self.keySwitch = keySwitch
+        self.name = name
+        self.numberOfKeys = numberOfKeys
+    }
+    
+    subscript(dynamicMember key: String) -> Any{
+        switch key {
+        case "siwtch":
+            return keySwitch
+        case "type":
+            return "This keyboard is \(name)"
+        case "numbers":
+            return numberOfKeys
+        default:
+            return ""
+        }
+    }
+}
+
+
+@resultBuilder
+struct StringBuilder {
+    static func buildBlock(_ parts: String...) -> String {
+        parts.map { s in
+            "⭐️" + s + "🌈"
+        }.joined(separator: "  ")
+    }
+}
+
+@resultBuilder
+struct ComplexStringBuilder {
+    static func buildBlock(_ parts: String...) -> String {
+        parts.joined(separator: "\n")
+    }
+    
+    static func buildArray(_ components: [String]) -> String {
+        components.joined(separator: "\n")
+    }
+    
+    static func buildEither(first component: String) -> String {
+        return component
+    }
+    
+    static func buildEither(second component: String) -> String {
+        return component
+    }
 }

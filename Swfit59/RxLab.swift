@@ -10,5 +10,7 @@ import RxCocoa
 import RxSwift
 let bag = DisposeBag()
 struct RxLab {
-    init() {}
+    init() {
+
+    }
 }
