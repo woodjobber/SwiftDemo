@@ -11,6 +11,7 @@ import CryptoSwift
 class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
+      
         let success = ServerResponse.result("6:00 am", "8:09 pm")
 //        let failure = ServerResponse.failure("Out of cheese.")
         switch success {
@@ -86,7 +87,29 @@ class ViewController: UIViewController {
         _ = cats.map(^\.name)
         _ = cats.map(\.age)
         _ = RxLab()
- 
+        
+        let json = #" {"first_name":"Tom", "age":null, "additionalInfo":"123", "address":"abc"} "#
+        let decoder = JSONDecoder()
+        decoder.keyDecodingStrategy = .convertFromSnakeCase
+        do {
+            let person = try decoder.decode(Man.self, from: json.data(using: .utf8)!)
+            print(person)
+        }catch {
+            
+        }
+  
+        
+        let json1 = """
+        {
+            "phone": null
+        }
+        """.data(using: .utf8)!
+        
+        do {
+            let result = try JSONDecoder().decode(Human.self, from: json1)
+            print(result.phone)
+        }catch {}
+        
     }
 
     override func viewDidAppear(_ animated: Bool) {
@@ -221,10 +244,14 @@ struct SmallNum {
         number = 0
         projectedValue = false
     }
+    init(wrappedValue: Int) {
+        number = wrappedValue
+        projectedValue = false
+    }
 }
 
 struct SomeStructure {
-    @SmallNum var somNum: Int
+    @SmallNum var somNum: Int = 10
 }
 
 extension Double {
@@ -435,3 +462,17 @@ func wash<T: Vehicle>(_ vehicle: T) {}
 func wash2<T>(_ vehicle: T) where T: Vehicle {}
 
 func wash3(_ vehicle: some Vehicle) {}
+
+struct Man: Codable {
+    var firstName: String
+    @DecodableDefault.Zero var age: Int = 1
+    var additionalInfo: String?
+    var address: String?
+    
+}
+
+struct Human: Kodable {
+    
+  @Coding(default: "+ 111")  var phone: String
+
+}

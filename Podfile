@@ -9,5 +9,6 @@ target 'Swfit59' do
   pod 'CryptoSwift'
   pod 'RxSwift'
   pod 'RxCocoa'
-  pod 'ObjectMapper'
+#  pod 'ObjectMapper'
+  pod 'Runtime'
 end
