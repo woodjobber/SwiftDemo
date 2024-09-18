@@ -6,15 +6,25 @@
 //
 
 import UIKit
+import UMCommon
+import Flutter
+import FlutterPluginRegistrant
 
 @UIApplicationMain
-class AppDelegate: UIResponder, UIApplicationDelegate {
+class AppDelegate: FlutterAppDelegate {
 
-    var window: UIWindow?
     private(set) var appCoordinator: AppCoordinator!
 
-    func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
+    lazy var engine: FlutterEngine = {
+       let result = FlutterEngine.init(name: "Books")
+       // This could be `run` earlier in the app to avoid the overhead of doing it the first time the
+       // engine is needed.
+       result.run(withEntrypoint: nil, initialRoute: "login_module")
+       return result
+     }()
+    override func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        GeneratedPluginRegistrant.register(with: self.engine);
         window = UIWindow(frame: UIScreen.main.bounds)
 //        window?.rootViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "ViewController")
         appCoordinator = AppCoordinator(window: window!)

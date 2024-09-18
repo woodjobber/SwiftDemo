@@ -48,29 +48,14 @@
 		7CC095F82A5AC50B00860312 /* Json4Swift_Base.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CC095F72A5AC50B00860312 /* Json4Swift_Base.swift */; };
 		7CC095FA2A5AF51C00860312 /* ObMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CC095F92A5AF51C00860312 /* ObMapper.swift */; };
 		7CC095FC2A5BB17800860312 /* DecodableDefault.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CC095FB2A5BB17800860312 /* DecodableDefault.swift */; };
-		7CC0965D2A5C199100860312 /* Coding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CC096492A5C199100860312 /* Coding.swift */; };
-		7CC0965E2A5C199100860312 /* CodableDate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CC0964A2A5C199100860312 /* CodableDate.swift */; };
-		7CC0965F2A5C199100860312 /* Codable+Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CC0964C2A5C199100860312 /* Codable+Utilities.swift */; };
-		7CC096602A5C199100860312 /* Runtime+Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CC0964D2A5C199100860312 /* Runtime+Utilities.swift */; };
-		7CC096612A5C199100860312 /* Codable+NestedKeyable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CC0964E2A5C199100860312 /* Codable+NestedKeyable.swift */; };
-		7CC096622A5C199100860312 /* Comparable+Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CC0964F2A5C199100860312 /* Comparable+Utilities.swift */; };
-		7CC096632A5C199100860312 /* TryCatch+Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CC096502A5C199100860312 /* TryCatch+Utilities.swift */; };
-		7CC096642A5C199100860312 /* Optional+Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CC096512A5C199100860312 /* Optional+Utilities.swift */; };
-		7CC096652A5C199100860312 /* DecodingError+Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CC096522A5C199100860312 /* DecodingError+Utilities.swift */; };
-		7CC096662A5C199100860312 /* KodableOption.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CC096542A5C199100860312 /* KodableOption.swift */; };
-		7CC096672A5C199100860312 /* Kodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CC096552A5C199100860312 /* Kodable.swift */; };
-		7CC096682A5C199100860312 /* KodableTransformable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CC096562A5C199100860312 /* KodableTransformable.swift */; };
-		7CC096692A5C199100860312 /* Codable+Lossless.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CC096572A5C199100860312 /* Codable+Lossless.swift */; };
-		7CC0966A2A5C199100860312 /* KodableError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CC096582A5C199100860312 /* KodableError.swift */; };
-		7CC0966B2A5C199100860312 /* Codable+AnyCodingKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CC096592A5C199100860312 /* Codable+AnyCodingKey.swift */; };
-		7CC0966C2A5C199100860312 /* KodableOptions+Presets.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CC0965A2A5C199100860312 /* KodableOptions+Presets.swift */; };
-		7CC0966F2A5C4ABD00860312 /* DefalutValue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CC0966E2A5C4ABD00860312 /* DefalutValue.swift */; };
 		86B8B669ED9A371AFE2A6AC9 /* Pods_Swfit59.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 75BC41618D9B35E7864ED9D6 /* Pods_Swfit59.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		75BC41618D9B35E7864ED9D6 /* Pods_Swfit59.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Swfit59.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7C18D2322A72A0CC00C43399 /* JsonToMap.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JsonToMap.swift; sourceTree = "<group>"; };
+		7C91432C2B122057008F9641 /* Swfit59.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Swfit59.entitlements; sourceTree = "<group>"; };
+		7C91432D2B122172008F9641 /* Swfit59-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Swfit59-Bridging-Header.h"; sourceTree = "<group>"; };
 		7CA8F6A62A5EA34C00400DA1 /* SampleViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SampleViewModel.swift; sourceTree = "<group>"; };
 		7CA8F6A82A5EA4DA00400DA1 /* CPSearchEventsApiModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CPSearchEventsApiModel.swift; sourceTree = "<group>"; };
 		7CA8F6AA2A5EE8D000400DA1 /* SampleCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SampleCell.swift; sourceTree = "<group>"; };
@@ -113,23 +98,6 @@
 		7CC095F72A5AC50B00860312 /* Json4Swift_Base.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Json4Swift_Base.swift; sourceTree = "<group>"; };
 		7CC095F92A5AF51C00860312 /* ObMapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObMapper.swift; sourceTree = "<group>"; };
 		7CC095FB2A5BB17800860312 /* DecodableDefault.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DecodableDefault.swift; sourceTree = "<group>"; };
-		7CC096492A5C199100860312 /* Coding.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Coding.swift; sourceTree = "<group>"; };
-		7CC0964A2A5C199100860312 /* CodableDate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CodableDate.swift; sourceTree = "<group>"; };
-		7CC0964C2A5C199100860312 /* Codable+Utilities.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Codable+Utilities.swift"; sourceTree = "<group>"; };
-		7CC0964D2A5C199100860312 /* Runtime+Utilities.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Runtime+Utilities.swift"; sourceTree = "<group>"; };
-		7CC0964E2A5C199100860312 /* Codable+NestedKeyable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Codable+NestedKeyable.swift"; sourceTree = "<group>"; };
-		7CC0964F2A5C199100860312 /* Comparable+Utilities.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Comparable+Utilities.swift"; sourceTree = "<group>"; };
-		7CC096502A5C199100860312 /* TryCatch+Utilities.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "TryCatch+Utilities.swift"; sourceTree = "<group>"; };
-		7CC096512A5C199100860312 /* Optional+Utilities.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Optional+Utilities.swift"; sourceTree = "<group>"; };
-		7CC096522A5C199100860312 /* DecodingError+Utilities.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "DecodingError+Utilities.swift"; sourceTree = "<group>"; };
-		7CC096542A5C199100860312 /* KodableOption.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KodableOption.swift; sourceTree = "<group>"; };
-		7CC096552A5C199100860312 /* Kodable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Kodable.swift; sourceTree = "<group>"; };
-		7CC096562A5C199100860312 /* KodableTransformable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KodableTransformable.swift; sourceTree = "<group>"; };
-		7CC096572A5C199100860312 /* Codable+Lossless.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Codable+Lossless.swift"; sourceTree = "<group>"; };
-		7CC096582A5C199100860312 /* KodableError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KodableError.swift; sourceTree = "<group>"; };
-		7CC096592A5C199100860312 /* Codable+AnyCodingKey.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Codable+AnyCodingKey.swift"; sourceTree = "<group>"; };
-		7CC0965A2A5C199100860312 /* KodableOptions+Presets.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "KodableOptions+Presets.swift"; sourceTree = "<group>"; };
-		7CC0966E2A5C4ABD00860312 /* DefalutValue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefalutValue.swift; sourceTree = "<group>"; };
 		E675A0C1F1E18DF04708C11A /* Pods-Swfit59.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Swfit59.debug.xcconfig"; path = "Target Support Files/Pods-Swfit59/Pods-Swfit59.debug.xcconfig"; sourceTree = "<group>"; };
 		F53F2A87EB8BBAB6310C2351 /* Pods-Swfit59.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Swfit59.release.xcconfig"; path = "Target Support Files/Pods-Swfit59/Pods-Swfit59.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -180,6 +148,7 @@
 				7CB03A492A4AD7C50078E96D /* Products */,
 				0ACFE910579D9A06F099EF2D /* Pods */,
 				2C419A1A644DBF756DF269A8 /* Frameworks */,
+				7C91432D2B122172008F9641 /* Swfit59-Bridging-Header.h */,
 			);
 			sourceTree = "<group>";
 		};
@@ -194,9 +163,9 @@
 		7CB03A4A2A4AD7C50078E96D /* Swfit59 */ = {
 			isa = PBXGroup;
 			children = (
+				7C91432C2B122057008F9641 /* Swfit59.entitlements */,
 				7CBFC3532A7DDBEB0024DAB2 /* mvvm-c */,
 				7CA8F6A52A5EA32000400DA1 /* Rxmvvm */,
-				7CC096472A5C199100860312 /* Sources */,
 				7CB03A4B2A4AD7C50078E96D /* AppDelegate.swift */,
 				7CB03A4F2A4AD7C50078E96D /* ViewController.swift */,
 				7CB03A512A4AD7C50078E96D /* Main.storyboard */,
@@ -247,55 +216,6 @@
 			path = "mvvm-c";
 			sourceTree = "<group>";
 		};
-		7CC096472A5C199100860312 /* Sources */ = {
-			isa = PBXGroup;
-			children = (
-				7CC096482A5C199100860312 /* Wrappers */,
-				7CC0964B2A5C199100860312 /* Extensions */,
-				7CC096532A5C199100860312 /* Kodable */,
-				7CC0966E2A5C4ABD00860312 /* DefalutValue.swift */,
-			);
-			name = Sources;
-			path = ../../Kodable/Sources;
-			sourceTree = "<group>";
-		};
-		7CC096482A5C199100860312 /* Wrappers */ = {
-			isa = PBXGroup;
-			children = (
-				7CC096492A5C199100860312 /* Coding.swift */,
-				7CC0964A2A5C199100860312 /* CodableDate.swift */,
-			);
-			path = Wrappers;
-			sourceTree = "<group>";
-		};
-		7CC0964B2A5C199100860312 /* Extensions */ = {
-			isa = PBXGroup;
-			children = (
-				7CC0964C2A5C199100860312 /* Codable+Utilities.swift */,
-				7CC0964D2A5C199100860312 /* Runtime+Utilities.swift */,
-				7CC0964E2A5C199100860312 /* Codable+NestedKeyable.swift */,
-				7CC0964F2A5C199100860312 /* Comparable+Utilities.swift */,
-				7CC096502A5C199100860312 /* TryCatch+Utilities.swift */,
-				7CC096512A5C199100860312 /* Optional+Utilities.swift */,
-				7CC096522A5C199100860312 /* DecodingError+Utilities.swift */,
-			);
-			path = Extensions;
-			sourceTree = "<group>";
-		};
-		7CC096532A5C199100860312 /* Kodable */ = {
-			isa = PBXGroup;
-			children = (
-				7CC096542A5C199100860312 /* KodableOption.swift */,
-				7CC096552A5C199100860312 /* Kodable.swift */,
-				7CC096562A5C199100860312 /* KodableTransformable.swift */,
-				7CC096572A5C199100860312 /* Codable+Lossless.swift */,
-				7CC096582A5C199100860312 /* KodableError.swift */,
-				7CC096592A5C199100860312 /* Codable+AnyCodingKey.swift */,
-				7CC0965A2A5C199100860312 /* KodableOptions+Presets.swift */,
-			);
-			path = Kodable;
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -304,10 +224,13 @@
 			buildConfigurationList = 7CB03A5C2A4AD7C70078E96D /* Build configuration list for PBXNativeTarget "Swfit59" */;
 			buildPhases = (
 				03A40DA54F291472111F584F /* [CP] Check Pods Manifest.lock */,
+				A5087509C5B0F6A242766CF2 /* [CP-User] Run Flutter Build flutter_module_umbrella Script */,
 				7CB03A442A4AD7C50078E96D /* Sources */,
 				7CB03A452A4AD7C50078E96D /* Frameworks */,
 				7CB03A462A4AD7C50078E96D /* Resources */,
 				1717CD49BB97EE17D8E295F9 /* [CP] Embed Pods Frameworks */,
+				52BF7498C8DFA61A2F1E44D5 /* [CP] Copy Pods Resources */,
+				7374C688B1E937DD049217D2 /* [CP-User] Embed Flutter Build flutter_module_umbrella Script */,
 			);
 			buildRules = (
 			);
@@ -330,6 +253,7 @@
 				TargetAttributes = {
 					7CB03A472A4AD7C50078E96D = {
 						CreatedOnToolsVersion = 14.3.1;
+						LastSwiftMigration = 1500;
 					};
 				};
 			};
@@ -406,6 +330,43 @@
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Swfit59/Pods-Swfit59-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
+		52BF7498C8DFA61A2F1E44D5 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Swfit59/Pods-Swfit59-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Swfit59/Pods-Swfit59-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Swfit59/Pods-Swfit59-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		7374C688B1E937DD049217D2 /* [CP-User] Embed Flutter Build flutter_module_umbrella Script */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			name = "[CP-User] Embed Flutter Build flutter_module_umbrella Script";
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "set -e\nset -u\nsource \"${SRCROOT}/../../FlutterDemo/flutter_module_umbrella/.ios/Flutter/flutter_export_environment.sh\"\nexport VERBOSE_SCRIPT_LOGGING=1 && \"$FLUTTER_ROOT\"/packages/flutter_tools/bin/xcode_backend.sh embed_and_thin";
+		};
+		A5087509C5B0F6A242766CF2 /* [CP-User] Run Flutter Build flutter_module_umbrella Script */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			name = "[CP-User] Run Flutter Build flutter_module_umbrella Script";
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "set -e\nset -u\nsource \"${SRCROOT}/../../FlutterDemo/flutter_module_umbrella/.ios/Flutter/flutter_export_environment.sh\"\nexport VERBOSE_SCRIPT_LOGGING=1 && \"$FLUTTER_ROOT\"/packages/flutter_tools/bin/xcode_backend.sh build";
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -416,54 +377,37 @@
 				7CB03A502A4AD7C50078E96D /* ViewController.swift in Sources */,
 				7CC095F62A5A7C6A00860312 /* RxLab.swift in Sources */,
 				7CBFC36F2A8383390024DAB2 /* ExampleCoordinator.swift in Sources */,
-				7CC0965F2A5C199100860312 /* Codable+Utilities.swift in Sources */,
 				7CC095FA2A5AF51C00860312 /* ObMapper.swift in Sources */,
 				7CBFC35B2A7F3AB80024DAB2 /* Todo.swift in Sources */,
 				7CA8F6A92A5EA4DA00400DA1 /* CPSearchEventsApiModel.swift in Sources */,
 				7CBFC35F2A7F3CAE0024DAB2 /* ToDoListViewModel.swift in Sources */,
 				7CBFC3572A7DE8010024DAB2 /* AppCoordinator.swift in Sources */,
 				7CC095E22A5825FD00860312 /* UIWindow+.swift in Sources */,
-				7CC0966B2A5C199100860312 /* Codable+AnyCodingKey.swift in Sources */,
 				7CC095EA2A586BF300860312 /* UICollectionViewCell+.swift in Sources */,
-				7CC096622A5C199100860312 /* Comparable+Utilities.swift in Sources */,
 				7CBFC3692A7F82F80024DAB2 /* String+.swift in Sources */,
 				7CC095FC2A5BB17800860312 /* DecodableDefault.swift in Sources */,
 				7CC095E42A58262300860312 /* UIViewController+.swift in Sources */,
 				7C18D2332A72A0CC00C43399 /* JsonToMap.swift in Sources */,
-				7CC0966C2A5C199100860312 /* KodableOptions+Presets.swift in Sources */,
-				7CC096692A5C199100860312 /* Codable+Lossless.swift in Sources */,
 				7CBFC3592A7F39070024DAB2 /* LoadableModel.swift in Sources */,
 				7CC095F22A58751A00860312 /* Array+.swift in Sources */,
-				7CC096672A5C199100860312 /* Kodable.swift in Sources */,
-				7CC0966F2A5C4ABD00860312 /* DefalutValue.swift in Sources */,
 				7CC095E82A58691F00860312 /* UITableView+.swift in Sources */,
-				7CC0966A2A5C199100860312 /* KodableError.swift in Sources */,
-				7CC0965D2A5C199100860312 /* Coding.swift in Sources */,
 				7CBFC3552A7DDC0F0024DAB2 /* Coordinator.swift in Sources */,
 				7CC095F02A58737400860312 /* Collection+.swift in Sources */,
 				7CC095DA2A58131200860312 /* Nibable.swift in Sources */,
-				7CC096632A5C199100860312 /* TryCatch+Utilities.swift in Sources */,
-				7CC096602A5C199100860312 /* Runtime+Utilities.swift in Sources */,
-				7CC096652A5C199100860312 /* DecodingError+Utilities.swift in Sources */,
 				7CC095EC2A586C4600860312 /* UICollectionView.swift in Sources */,
 				7CC095F42A59092900860312 /* Operators.swift in Sources */,
 				7CC095F82A5AC50B00860312 /* Json4Swift_Base.swift in Sources */,
 				7CA8F6A72A5EA34C00400DA1 /* SampleViewModel.swift in Sources */,
 				7CC095DE2A5818DC00860312 /* Storyboadable.swift in Sources */,
-				7CC096662A5C199100860312 /* KodableOption.swift in Sources */,
-				7CC096682A5C199100860312 /* KodableTransformable.swift in Sources */,
 				7CC095E62A58311100860312 /* UIApplication+.swift in Sources */,
 				7CC095EE2A5871B700860312 /* Dictionary+.swift in Sources */,
-				7CC096612A5C199100860312 /* Codable+NestedKeyable.swift in Sources */,
 				7CBFC3612A7F3EC20024DAB2 /* ToDoListViewController.swift in Sources */,
 				7CBFC36B2A80A0AF0024DAB2 /* UIViewController+Reactive.swift in Sources */,
 				7CBFC3632A7F42450024DAB2 /* TodoListCoordinator.swift in Sources */,
 				7CC095E02A5825A200860312 /* UITableViewCell+.swift in Sources */,
-				7CC096642A5C199100860312 /* Optional+Utilities.swift in Sources */,
 				7CB03A4C2A4AD7C50078E96D /* AppDelegate.swift in Sources */,
 				7CBFC35D2A7F3AFB0024DAB2 /* TodoListInteractor.swift in Sources */,
 				7CA8F6AB2A5EE8D000400DA1 /* SampleCell.swift in Sources */,
-				7CC0965E2A5C199100860312 /* CodableDate.swift in Sources */,
 				7CBFC36D2A80E43A0024DAB2 /* RxUIApplicationDelegateProxy.swift in Sources */,
 				7CC095DC2A58185500860312 /* NSObjectProtocol+.swift in Sources */,
 			);
@@ -611,9 +555,11 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_ENTITLEMENTS = Swfit59/Swfit59.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = WYMPMVT32S;
+				DEVELOPMENT_TEAM = AQQ23CJPMD;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Swfit59/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = Swift59;
@@ -626,12 +572,14 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.soer.Swfit59;
+				PRODUCT_BUNDLE_IDENTIFIER = com.xht.lkchat;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
 				SUPPORTS_MACCATALYST = NO;
 				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "Swfit59-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
@@ -643,9 +591,11 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_ENTITLEMENTS = Swfit59/Swfit59.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = WYMPMVT32S;
+				DEVELOPMENT_TEAM = AQQ23CJPMD;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Swfit59/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = Swift59;
@@ -658,12 +608,13 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.soer.Swfit59;
+				PRODUCT_BUNDLE_IDENTIFIER = com.xht.lkchat;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
 				SUPPORTS_MACCATALYST = NO;
 				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "Swfit59-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};

@@ -9,6 +9,16 @@ import UIKit
 import CryptoSwift
 import RxSwift
 import RxCocoa
+import Flutter
+
+class DemoFlutterController: FlutterViewController {
+    
+    deinit {
+        let flutterEngine = (UIApplication.shared.delegate as! AppDelegate).engine
+        let channel = FlutterMethodChannel(name: "io.flutter.update.entrypoint", binaryMessenger: flutterEngine.binaryMessenger)
+        channel.invokeMethod("destroy.flutter.app", arguments: "/");
+    }
+}
 
 class ViewController: UIViewController,Storyboardable {
 
@@ -17,18 +27,42 @@ class ViewController: UIViewController,Storyboardable {
     
     @IBOutlet weak var textField: UITextField!
     
-
+    @IBOutlet weak var openFlutter: UIButton!
+    
     private let viewModel: SampleViewModel = SampleViewModel()
     private var eventsDataSource: [Event] = []
     private let disposeBag = DisposeBag()
+    var clickNum = 0;
+    @objc func showFlutter() {
+        let flutterEngine = (UIApplication.shared.delegate as! AppDelegate).engine
+        let flutterViewController =
+        DemoFlutterController(engine: flutterEngine, nibName: nil, bundle: nil)
+        let channel = FlutterMethodChannel(name: "io.flutter.update.entrypoint", binaryMessenger: flutterViewController.binaryMessenger)
+       
+        channel.invokeMethod("entrypoint", arguments: clickNum % 2 == 0 ? "register_module" : "login_module");
+        clickNum += 1
+        present(flutterViewController, animated: true, completion: nil)
+
+       
+}
+    @IBAction func onOpenFlutter(_ sender: Any) {
+        
+        showFlutter();
+    }
     
     
     static var storyboardName: String {
         return "Main"
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated);
+    
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        #if false
         let success = ServerResponse.result("6:00 am", "8:09 pm")
 //        let failure = ServerResponse.failure("Out of cheese.")
         switch success {
@@ -76,6 +110,8 @@ class ViewController: UIViewController,Storyboardable {
         var somStr = SomeStructure()
         somStr.somNum = 66
         print(somStr.$somNum)
+        
+        #endif
         print(UIApplication.shared.topViewController!)
 
         /// https://dev.classmethod.jp/articles/swift_keypath1/
@@ -88,46 +124,8 @@ class ViewController: UIViewController,Storyboardable {
                 return "meow"
             }
         }
-        _ = Cat(name: "mi-san", age: 10)
-
-        let _: PartialKeyPath<Cat> = \.age
-        let _: KeyPath<Cat, String> = \.name
-        let _ = \Cat.age
-
-        let cats = [Cat]()
-        _ = cats.map {
-            $0[keyPath: \Cat.name]
-        }
-
-        let f: (Cat) -> String = { kp in { root in root[keyPath: kp] } }(\Cat.name)
-        _ = cats.map(f)
-        // ^ prefix operators
-        _ = cats.map(^\.name)
-        _ = cats.map(\.age)
-        _ = RxLab()
-        
-        let json = #" {"first_name":"Tom", "age":null, "additionalInfo":"123", "address":"abc"} "#
-        let decoder = JSONDecoder()
-        decoder.keyDecodingStrategy = .convertFromSnakeCase
-        do {
-            let person = try decoder.decode(Man.self, from: json.data(using: .utf8)!)
-            print(person)
-        }catch {
-            
-        }
-  
-        
-        let json1 = """
-        {
-            "phone": "12",
-            "age": 12
-        }
-        """.data(using: .utf8)!
-        
-        do {
-            let result = try JSONDecoder().decode(Human.self, from: json1)
-            print(result)
-        }catch {}
+      
+     
         UIView.animate(withDuration: 5, animations: self.view.backgroundColor = .blue)
     
         let xs = Observable.deferred { () -> Observable in
@@ -175,7 +173,7 @@ class ViewController: UIViewController,Storyboardable {
     }
     
     @ComplexStringBuilder
-    func countDown() -> String {
+func countDown() -> String {
        for i in (0...10).reversed() {
             "\(i)..."
         }
@@ -541,15 +539,6 @@ struct Man: Codable {
     
 }
 
-struct Human: Kodable {
-    init() {
-
-    }
-    
-    @Coding()  var phone: String = "123456"
-    @Coding()  var age: Int = 0
-    
-}
 
 extension UIView {
    class func animate(withDuration duration: TimeInterval, animations: @escaping @autoclosure () -> Void) {
